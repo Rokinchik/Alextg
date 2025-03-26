@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Rokin Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'Intro';
@@ -20,6 +23,57 @@
             align-items: center;
             background: #000;
             overflow: hidden;
+        }
+
+        .telegram-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            border: 2px solid #00ffcc;
+            border-radius: 25px;
+            padding: 12px 25px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Rubik', sans-serif;
+        }
+        
+        .telegram-button:hover {
+            background: rgba(0, 255, 204, 0.2);
+            transform: translateY(-3px);
+            box-shadow: none;
+        }
+        
+        .telegram-button:active {
+            transform: translateY(1px);
+        }
+        
+        .telegram-icon {
+            width: 28px;
+            height: 28px;
+            fill: #00ffcc;
+            filter: none;
+            transition: all 0.3s ease;
+        }
+        
+        .telegram-button:hover .telegram-icon {
+            transform: rotate(10deg);
+            filter: none;
+        }
+        
+        .telegram-text {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: none;
         }
 
         .title {
@@ -178,7 +232,12 @@
     </style>
 </head>
 <body>
-    <h1 class="title">@RRSIGNALBOT</h1>
+    <a href="https://t.me/RRSIGNALBOT" class="telegram-button">
+        <svg class="telegram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.95 8.03c-.08.67-.42 3.06-.78 5.64l-.98 6.12c-.08.5-.3.67-.5.67-.43 0-.87-.32-1.37-.64l-3.32-2.44-1.63 1.57c-.18.17-.33.32-.67.32-.16 0-.32-.08-.42-.34l-.92-3.05-.05-.15-3.2-1.04c-.45-.13-.67-.3-.67-.62 0-.25.18-.5.55-.58l12.58-4.82c.13-.08.28-.08.42-.08.25 0 .5.15.63.4.08.16.13.33.1.5z"/>
+        </svg>
+        <span class="telegram-text">@RRSIGNALBOT</span>
+    </a>
     <canvas id="particleCanvas"></canvas>
     <div>
         <select id="fieldSelect">
